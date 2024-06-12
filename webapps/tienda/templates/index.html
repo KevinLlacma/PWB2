@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="mb-4">Customers</h1>
+        <ul class="list-group mb-4">
+            {% for e in customers %}
+                <li class="list-group-item">Customer -> {{ e.name }}</li>
+            {% endfor %}
+        </ul>
+
+        <h1 class="mb-4">Productos</h1>
+        <ul class="list-group mb-4">
+            {% for e in productos %}
+                <li class="list-group-item">Producto -> {{ e.name }}  , cantidad : {{ e.stock }}</li>
+            {% endfor %}
+        </ul>
+
+        <h1 class="mb-4">Ordenes</h1>
+        <ul class="list-group mb-4">
+            {% for e in ordenes %}
+                <li class="list-group-item">Orden de -> {{ e.customer }} , total {{ e.total }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

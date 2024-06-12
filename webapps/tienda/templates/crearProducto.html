@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="card p-4" style="width: 400px;">
+            <h1 class="text-center">Crear Producto</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
